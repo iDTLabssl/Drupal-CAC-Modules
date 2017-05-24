@@ -1,0 +1,23 @@
+uuid: 88839644-203d-4187-9b40-80256a51840d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: qy9Jhi907e_aLzBQi4I4Ljs-bkeInVoDIKee4kFu0xw
+id: node.field_postal_address
+field_name: field_postal_address
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 881e2f7a-2366-47e1-a616-aed4172d8e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_sub_of_financial
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: qo1bkJxnhHGafRgSwfxYdwaSDZjtsdfQhKgwJ1igjSU
+id: node.company_registration.field_last_sub_of_financial
+field_name: field_last_sub_of_financial
+entity_type: node
+bundle: company_registration
+label: 'Last Sub. of Financial Statement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

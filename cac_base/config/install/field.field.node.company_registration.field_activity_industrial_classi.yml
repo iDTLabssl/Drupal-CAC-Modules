@@ -1,0 +1,30 @@
+uuid: f0ec783f-53d9-4c0c-a397-6f87078d39ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_activity_industrial_classi
+    - node.type.company_registration
+    - taxonomy.vocabulary.activity_industrial_classificati
+_core:
+  default_config_hash: vthdBa4oTzLD-4VneIELw989-LDjOsHoW5d125ov70Y
+id: node.company_registration.field_activity_industrial_classi
+field_name: field_activity_industrial_classi
+entity_type: node
+bundle: company_registration
+label: 'Activity/Industrial Classifications'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      activity_industrial_classificati: activity_industrial_classificati
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

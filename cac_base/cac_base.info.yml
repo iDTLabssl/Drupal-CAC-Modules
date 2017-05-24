@@ -1,0 +1,18 @@
+name: CAC Base
+type: module
+description: Provides custom utilities to the corporate affair commission modules
+package: Corporate Affairs Commission
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:path
+  - drupal:text
+  - drupal:serialization
+  - drupal:rest
+  - basic_auth
+  - hal
+  - facets
+  - search_api
+  - search_api_db
+core: '8.x'
+project: 'cac'

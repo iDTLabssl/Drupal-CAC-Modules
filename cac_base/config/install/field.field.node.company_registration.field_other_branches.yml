@@ -1,0 +1,21 @@
+uuid: 1ad26986-e859-47cc-a716-add5e0e5dda6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_branches
+    - node.type.company_registration
+_core:
+  default_config_hash: 0MmKz4MA5J0e62aOEYk0hWu_bWopsWQkkToJqFeolJA
+id: node.company_registration.field_other_branches
+field_name: field_other_branches
+entity_type: node
+bundle: company_registration
+label: 'Other Branches in Sierra Leone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

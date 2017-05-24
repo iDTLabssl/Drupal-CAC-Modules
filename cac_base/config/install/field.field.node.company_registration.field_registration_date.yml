@@ -1,0 +1,23 @@
+uuid: ec070811-70fb-4571-8a56-4f64e5bc3ec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_date
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: Sf0TgqDiq2UHjleo9AGi6mG0uM72JCWWlKnNlW0OJGE
+id: node.company_registration.field_registration_date
+field_name: field_registration_date
+entity_type: node
+bundle: company_registration
+label: 'Date of Registration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

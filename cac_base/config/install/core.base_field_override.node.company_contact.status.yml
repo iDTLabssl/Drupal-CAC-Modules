@@ -1,0 +1,24 @@
+uuid: 47e961a7-e5da-425e-968c-56f77e4b5538
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.company_contact
+_core:
+  default_config_hash: zgi7SKjCoj4R1DM5elbo4hT6ExhXP6XV-_8bbm6DSMg
+id: node.company_contact.status
+field_name: status
+entity_type: node
+bundle: company_contact
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

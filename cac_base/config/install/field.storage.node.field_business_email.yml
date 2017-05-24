@@ -1,0 +1,23 @@
+uuid: c454921a-418c-4529-9145-2667c37ddf37
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: PgxWw5fJX-4-mBdlXfBGV9JQTUy9IaXlleYBBru0XXU
+id: node.field_business_email
+field_name: field_business_email
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

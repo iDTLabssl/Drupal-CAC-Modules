@@ -1,0 +1,21 @@
+uuid: 8649e9b0-75e7-4cd9-8440-eccbfa356818
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uuid
+    - node.type.company_registration
+_core:
+  default_config_hash: aaftr0JZHD-0dK6MSYQiZchBJZrrk_BX35Ph3Mu_7Mo
+id: node.company_registration.field_uuid
+field_name: field_uuid
+entity_type: node
+bundle: company_registration
+label: UUID
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

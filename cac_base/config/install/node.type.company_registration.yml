@@ -1,0 +1,19 @@
+uuid: 849ca08c-bb4a-4694-8d0e-8e97333b57e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: pfBirYoJ8qoxepj-u_CkmHGh3POBUl5fPiE2C_wntc8
+name: 'Company Registration'
+type: company_registration
+description: 'Company registration records migrated from CAC''s Odoo backend'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

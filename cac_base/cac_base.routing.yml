@@ -1,0 +1,6 @@
+config_cac_base.description:
+  path: 'cac/company_registration'
+  defaults:
+    _controller: '\Drupal\cac_base\Controller\NodeTypeCompanyRegistration::description'
+  requirements:
+    _permission: 'access content'

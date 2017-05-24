@@ -1,0 +1,21 @@
+uuid: 14bff855-bffc-4ea9-a12e-51a0b68258bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: CFxJvf4jv3uf2ZxBitidPyJEYzKcjYCIatk33vrclI8
+id: node.field_accountant_auditor_id
+field_name: field_accountant_auditor_id
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: db518132-4509-419c-9409-56342354630c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company_legacy_registration.field_address_legacy
+    - field.field.node.company_legacy_registration.field_category
+    - field.field.node.company_legacy_registration.field_str_date
+    - node.type.company_legacy_registration
+  module:
+    - user
+_core:
+  default_config_hash: VuXQTCWmVZ4x_-O5fDvVgRv8hMQEgIRlSm4_xrt06wU
+id: node.company_legacy_registration.teaser
+targetEntityType: node
+bundle: company_legacy_registration
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_address_legacy: true
+  field_category: true
+  field_str_date: true

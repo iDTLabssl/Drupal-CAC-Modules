@@ -1,0 +1,8 @@
+name: Webform CAC Customization
+type: module
+description: Webform plugin for CAC Customization
+package: Webform
+dependencies:
+  - webform:webform (>=8.x-5.x)
+core: '8.x'
+project: 'webform_cac'

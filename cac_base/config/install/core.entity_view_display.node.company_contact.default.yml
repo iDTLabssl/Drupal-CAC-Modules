@@ -1,0 +1,96 @@
+uuid: 579371f7-7922-4194-b810-bd11bc18088b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company_contact.field_address
+    - field.field.node.company_contact.field_appointed_on
+    - field.field.node.company_contact.field_appointment_end
+    - field.field.node.company_contact.field_company
+    - field.field.node.company_contact.field_email
+    - field.field.node.company_contact.field_nationality
+    - field.field.node.company_contact.field_phone_number
+    - field.field.node.company_contact.field_type
+    - node.type.company_contact
+  module:
+    - datetime
+    - options
+    - user
+_core:
+  default_config_hash: K_nX0_IwYmS3bck_ylk8O5IE-ShmAwOpTI58Po3lrq0
+id: node.company_contact.default
+targetEntityType: node
+bundle: company_contact
+mode: default
+content:
+  field_address:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_appointed_on:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_appointment_end:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_company:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_email:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nationality:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_number:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_type:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,30 @@
+uuid: 01701790-e078-41f8-b5bc-5a0f39d93391
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_authorized_contact
+    - node.type.company_contact
+    - node.type.company_registration
+_core:
+  default_config_hash: Gt2p-_ad7j3MmKbSI5qSCYcHxdpaGPsrPcYSqyO8n1M
+id: node.company_registration.field_authorized_contact
+field_name: field_authorized_contact
+entity_type: node
+bundle: company_registration
+label: 'Authorized Contact'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company_contact: company_contact
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

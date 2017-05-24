@@ -1,0 +1,22 @@
+uuid: c8a4d01e-3db2-4d26-9a97-f9bdf6f61009
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: mOOP6Y1n5-FVMbRaIdjW4eIJOon3mQjaZ9EP6gYa1JY
+id: node.field_activity_industrial_classi
+field_name: field_activity_industrial_classi
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

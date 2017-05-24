@@ -1,0 +1,30 @@
+uuid: 57a43392-cdc0-4380-9eaf-abe966018c7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company
+    - node.type.company_contact
+    - node.type.company_registration
+_core:
+  default_config_hash: Nb8F4Kde8BHD1qDwrJzwcZ8qZ4neDnY3gJtus7UES3w
+id: node.company_contact.field_company
+field_name: field_company
+entity_type: node
+bundle: company_contact
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company_registration: company_registration
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

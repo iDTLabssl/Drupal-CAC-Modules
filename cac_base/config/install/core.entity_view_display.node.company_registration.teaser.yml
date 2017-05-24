@@ -1,0 +1,92 @@
+uuid: bbe8bac2-5730-4d86-adbc-6c86138a561f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company_registration.body
+    - field.field.node.company_registration.field_accountant_auditor_id
+    - field.field.node.company_registration.field_activity_industrial_classi
+    - field.field.node.company_registration.field_authorized_contact
+    - field.field.node.company_registration.field_business_address
+    - field.field.node.company_registration.field_business_country
+    - field.field.node.company_registration.field_business_district
+    - field.field.node.company_registration.field_business_email
+    - field.field.node.company_registration.field_business_phone
+    - field.field.node.company_registration.field_business_website
+    - field.field.node.company_registration.field_can_be_managed_by
+    - field.field.node.company_registration.field_company_secretary_id
+    - field.field.node.company_registration.field_council_no_
+    - field.field.node.company_registration.field_country_of_incorporation
+    - field.field.node.company_registration.field_director_ids
+    - field.field.node.company_registration.field_incorporation_date
+    - field.field.node.company_registration.field_last_sub_of_financial
+    - field.field.node.company_registration.field_last_submission_of_return
+    - field.field.node.company_registration.field_legal_entity
+    - field.field.node.company_registration.field_locality
+    - field.field.node.company_registration.field_nassit_
+    - field.field.node.company_registration.field_next_submission_of_financi
+    - field.field.node.company_registration.field_next_submission_of_return
+    - field.field.node.company_registration.field_odoo_id
+    - field.field.node.company_registration.field_other_branches
+    - field.field.node.company_registration.field_postal_address
+    - field.field.node.company_registration.field_registration_date
+    - field.field.node.company_registration.field_registration_number
+    - field.field.node.company_registration.field_registration_type
+    - field.field.node.company_registration.field_shareholders_ids
+    - field.field.node.company_registration.field_tin_number
+    - field.field.node.company_registration.field_uuid
+    - node.type.company_registration
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: W4cM5-goxxmoUfBcBHt6kxxP9yGR36jY0LDitwqTkG8
+id: node.company_registration.teaser
+targetEntityType: node
+bundle: company_registration
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_accountant_auditor_id: true
+  field_activity_industrial_classi: true
+  field_authorized_contact: true
+  field_business_address: true
+  field_business_country: true
+  field_business_district: true
+  field_business_email: true
+  field_business_phone: true
+  field_business_website: true
+  field_can_be_managed_by: true
+  field_company_secretary_id: true
+  field_council_no_: true
+  field_country_of_incorporation: true
+  field_director_ids: true
+  field_incorporation_date: true
+  field_last_sub_of_financial: true
+  field_last_submission_of_return: true
+  field_legal_entity: true
+  field_locality: true
+  field_nassit_: true
+  field_next_submission_of_financi: true
+  field_next_submission_of_return: true
+  field_odoo_id: true
+  field_other_branches: true
+  field_postal_address: true
+  field_registration_date: true
+  field_registration_number: true
+  field_registration_type: true
+  field_shareholders_ids: true
+  field_tin_number: true
+  field_uuid: true

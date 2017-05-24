@@ -1,0 +1,23 @@
+uuid: e9ef7b4e-883c-4b44-a7a8-4122fe954f1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next_submission_of_financi
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: W2-fTnIxveaxAEUBYXzhMEYkxJgikI7l0SSskSUWFFw
+id: node.company_registration.field_next_submission_of_financi
+field_name: field_next_submission_of_financi
+entity_type: node
+bundle: company_registration
+label: 'Next Submission of Financials'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

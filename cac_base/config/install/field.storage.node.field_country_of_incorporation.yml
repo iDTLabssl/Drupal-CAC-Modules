@@ -1,0 +1,23 @@
+uuid: fca39212-8502-496e-adc0-8a01b4c8ee88
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: oDx1byN4BOm5yRaj1eMZKWcyQaIc_1yB7XQCXtrjXPo
+id: node.field_country_of_incorporation
+field_name: field_country_of_incorporation
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

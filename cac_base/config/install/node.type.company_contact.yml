@@ -1,0 +1,19 @@
+uuid: d9519ea2-d003-47b5-95f3-b37e87e5e1e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: QSuTkakDrGVwNG-UeLakyuPx8vJYt7vVeQyffJ-0zFA
+name: 'Company Contact'
+type: company_contact
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

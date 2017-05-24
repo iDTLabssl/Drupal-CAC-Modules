@@ -1,0 +1,21 @@
+uuid: e7475897-a45a-4b59-bffe-68f7a1539e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_address
+    - node.type.company_registration
+_core:
+  default_config_hash: Y85krHQx2RrhmzHOSl58qbJ5_7y85-xtdcCNiCNfU18
+id: node.company_registration.field_business_address
+field_name: field_business_address
+entity_type: node
+bundle: company_registration
+label: 'Business Contact - Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 397ec978-3794-41d9-8633-bec7276afee4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.company_registration
+_core:
+  default_config_hash: s8cL-Tfn-2zOjTI7YDCZHCZU1wqLwEY30b7s70mZ-l8
+id: node.company_registration.promote
+field_name: promote
+entity_type: node
+bundle: company_registration
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

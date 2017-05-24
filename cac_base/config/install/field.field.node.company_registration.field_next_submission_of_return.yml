@@ -1,0 +1,23 @@
+uuid: 384ac35f-7f61-402a-867b-69ef5e1ce667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_next_submission_of_return
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: RQHWR47pRCHqxQ22XRWct9HkOkqZRlCKSK6dLUbvc10
+id: node.company_registration.field_next_submission_of_return
+field_name: field_next_submission_of_return
+entity_type: node
+bundle: company_registration
+label: 'Next Submission of Return'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

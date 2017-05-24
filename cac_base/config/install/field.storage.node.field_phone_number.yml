@@ -1,0 +1,23 @@
+uuid: 35746aeb-8e9e-4e1b-a134-064032c42c13
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: nyEA8Qse4qWlYKuYja2eG9PLGCQhZE89czjG9XtbT3E
+id: node.field_phone_number
+field_name: field_phone_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

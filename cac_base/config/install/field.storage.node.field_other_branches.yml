@@ -1,0 +1,21 @@
+uuid: be310d04-5a60-4108-a207-db6b09c460bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: xa-s3YJa0EypIoU9OnJMrEEYhZMKwHgJkV9AW5MwPfI
+id: node.field_other_branches
+field_name: field_other_branches
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

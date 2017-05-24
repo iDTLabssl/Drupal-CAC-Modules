@@ -1,0 +1,24 @@
+uuid: 26f51316-4378-455f-a629-49462aa71610
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.company_registration
+  module:
+    - text
+_core:
+  default_config_hash: wkrKxfG83oukJpaZoo9QSfeJ0v8c2rW1dZLfMNTUy_o
+id: node.company_registration.body
+field_name: body
+entity_type: node
+bundle: company_registration
+label: 'Description of Activiies'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

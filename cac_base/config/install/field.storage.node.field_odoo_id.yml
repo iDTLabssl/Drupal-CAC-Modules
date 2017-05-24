@@ -1,0 +1,22 @@
+uuid: c6d9ecaf-7773-46f4-8e71-a60182f82cf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Pjal3efqPF8GNl8pGyduoO5goDfdjfGJF2Fm3dbDKKY
+id: node.field_odoo_id
+field_name: field_odoo_id
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

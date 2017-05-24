@@ -1,0 +1,21 @@
+uuid: e4b507e7-26b9-490b-a519-4ffedf68b22d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country_of_incorporation
+    - node.type.company_registration
+_core:
+  default_config_hash: WL4NkbK-cSss0o0HbfLHaTde7vbOSgI_s1A3-1BfjRI
+id: node.company_registration.field_country_of_incorporation
+field_name: field_country_of_incorporation
+entity_type: node
+bundle: company_registration
+label: 'Country of Incorporation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

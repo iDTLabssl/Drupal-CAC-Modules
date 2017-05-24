@@ -1,0 +1,8 @@
+name: Payment Webform Integration
+description: Provides webform with the pay to submit functionality via integration with payment.
+type: module
+package: Payment
+dependencies:
+  - payment
+  - webform
+core: '8.x'

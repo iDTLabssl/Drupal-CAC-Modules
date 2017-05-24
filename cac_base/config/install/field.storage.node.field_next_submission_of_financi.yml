@@ -1,0 +1,22 @@
+uuid: 8734fe96-bf0b-47a4-abfc-135c95c80087
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: BrnU4pHZLMoDMKVHoHbeh78gTPygEqH2mCjd65pLe0U
+id: node.field_next_submission_of_financi
+field_name: field_next_submission_of_financi
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

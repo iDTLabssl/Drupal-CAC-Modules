@@ -1,0 +1,21 @@
+uuid: bbb3eb61-e6a8-4b59-a0c9-32ac7926286f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number
+    - node.type.company_contact
+_core:
+  default_config_hash: QIuy36_RGUJvyd5ch7CO94N0jz0I20T83FgYfzURwqc
+id: node.company_contact.field_phone_number
+field_name: field_phone_number
+entity_type: node
+bundle: company_contact
+label: 'Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

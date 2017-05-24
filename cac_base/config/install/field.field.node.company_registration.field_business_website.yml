@@ -1,0 +1,21 @@
+uuid: d4dc45da-32c9-4797-89a0-0409c30ab31b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_website
+    - node.type.company_registration
+_core:
+  default_config_hash: EdjvNk-52FapoWu8wutH4-sl9N4XyuyeXksH4E1V2fE
+id: node.company_registration.field_business_website
+field_name: field_business_website
+entity_type: node
+bundle: company_registration
+label: 'Business Contact - Website'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: 42901c80-fff3-4e22-a576-3ec5ed8aba68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_can_be_managed_by
+    - node.type.company_registration
+_core:
+  default_config_hash: 8XtYwKuDldVlfECqUchmY8yQWKd0rq4U9g_O3yJDQ2g
+id: node.company_registration.field_can_be_managed_by
+field_name: field_can_be_managed_by
+entity_type: node
+bundle: company_registration
+label: 'Can be Managed by'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

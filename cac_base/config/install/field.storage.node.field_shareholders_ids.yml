@@ -1,0 +1,21 @@
+uuid: 15d087cf-60a0-41a2-9015-b227584bc410
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 3U_-goE0UsRshE2jpzNRmBWC_Oxcp-5T-UBG41eEflc
+id: node.field_shareholders_ids
+field_name: field_shareholders_ids
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

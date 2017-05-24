@@ -1,0 +1,21 @@
+uuid: b3e17e23-d3bd-4f61-a2f7-1f3920574473
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registration_number
+    - node.type.company_registration
+_core:
+  default_config_hash: CzlMzdomh4wrU4pIi3JwPoh2sDzLehAzHT8hnqJoY2U
+id: node.company_registration.field_registration_number
+field_name: field_registration_number
+entity_type: node
+bundle: company_registration
+label: 'Registration Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

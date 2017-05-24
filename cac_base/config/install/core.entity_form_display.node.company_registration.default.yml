@@ -1,0 +1,302 @@
+uuid: 3ffaa0d4-ec37-4885-92bc-6ae01d6d941d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company_registration.body
+    - field.field.node.company_registration.field_accountant_auditor_id
+    - field.field.node.company_registration.field_activity_industrial_classi
+    - field.field.node.company_registration.field_authorized_contact
+    - field.field.node.company_registration.field_business_address
+    - field.field.node.company_registration.field_business_country
+    - field.field.node.company_registration.field_business_district
+    - field.field.node.company_registration.field_business_email
+    - field.field.node.company_registration.field_business_phone
+    - field.field.node.company_registration.field_business_website
+    - field.field.node.company_registration.field_can_be_managed_by
+    - field.field.node.company_registration.field_company_secretary_id
+    - field.field.node.company_registration.field_council_no_
+    - field.field.node.company_registration.field_country_of_incorporation
+    - field.field.node.company_registration.field_director_ids
+    - field.field.node.company_registration.field_incorporation_date
+    - field.field.node.company_registration.field_last_sub_of_financial
+    - field.field.node.company_registration.field_last_submission_of_return
+    - field.field.node.company_registration.field_legal_entity
+    - field.field.node.company_registration.field_locality
+    - field.field.node.company_registration.field_nassit_
+    - field.field.node.company_registration.field_next_submission_of_financi
+    - field.field.node.company_registration.field_next_submission_of_return
+    - field.field.node.company_registration.field_odoo_id
+    - field.field.node.company_registration.field_other_branches
+    - field.field.node.company_registration.field_postal_address
+    - field.field.node.company_registration.field_registration_date
+    - field.field.node.company_registration.field_registration_number
+    - field.field.node.company_registration.field_registration_type
+    - field.field.node.company_registration.field_shareholders_ids
+    - field.field.node.company_registration.field_tin_number
+    - field.field.node.company_registration.field_uuid
+    - node.type.company_registration
+  module:
+    - datetime
+    - text
+_core:
+  default_config_hash: XojvoIyMfH72Q0KZrHfHSl2EWhFVY29BhnCHfe0MoxA
+id: node.company_registration.default
+targetEntityType: node
+bundle: company_registration
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_accountant_auditor_id:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_activity_industrial_classi:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_authorized_contact:
+    weight: 29
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_business_address:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_business_country:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_business_district:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_business_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_business_phone:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_business_website:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_can_be_managed_by:
+    weight: 30
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_company_secretary_id:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_council_no_:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_country_of_incorporation:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_director_ids:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_incorporation_date:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_last_sub_of_financial:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_last_submission_of_return:
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_legal_entity:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_locality:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_nassit_:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_next_submission_of_financi:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_next_submission_of_return:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_other_branches:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_postal_address:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_date:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_registration_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_type:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_shareholders_ids:
+    weight: 25
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_tin_number:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_odoo_id: true
+  field_uuid: true
+  path: true
+  promote: true
+  sticky: true

@@ -1,0 +1,23 @@
+uuid: dfe3a37f-2f52-425d-a7b3-7a4bf208494b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.company_contact
+  module:
+    - options
+_core:
+  default_config_hash: fClpAjUjx4M7m8_SElvks6xGdrtFGHas3jjBkIwl8sA
+id: node.company_contact.field_type
+field_name: field_type
+entity_type: node
+bundle: company_contact
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,24 @@
+uuid: 4926b31d-f24d-444d-8fae-5bf887e1ad03
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.company_legacy_registration
+_core:
+  default_config_hash: 7QEQkQgZCN86HFzLD8qP1elKQxcTgOzvA1y7RsHH5cA
+id: node.company_legacy_registration.promote
+field_name: promote
+entity_type: node
+bundle: company_legacy_registration
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

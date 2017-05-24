@@ -1,0 +1,23 @@
+uuid: d29bba86-d426-495c-99b5-6344c3816339
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legal_entity
+    - node.type.company_registration
+  module:
+    - options
+_core:
+  default_config_hash: mFxmdB2gj4qCf0-ZnxdGyhQRZONOfJWUeJ5FS9k4psM
+id: node.company_registration.field_legal_entity
+field_name: field_legal_entity
+entity_type: node
+bundle: company_registration
+label: 'Legal Entity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

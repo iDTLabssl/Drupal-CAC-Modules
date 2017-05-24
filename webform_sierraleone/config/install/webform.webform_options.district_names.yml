@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: district_names
+label: 'District names'
+category: Geographic
+options: |
+  Kailahun: Kailahun
+  Kenema: Kenema
+  Kono: Kono
+  Bombali: Bombali
+  Kambia: Kambia
+  Koinadugu: Koinadugu
+  'Port Loko': 'Port Loko'
+  Tonkolili: Tonkolili
+  Bo: Bo
+  Bonthe: Bonthe
+  Moyamba: Moyamba
+  Pujehun: Pujehun
+  'Western Rural': 'Western Rural'
+  'Western Urban': 'Western Urban'
+
+

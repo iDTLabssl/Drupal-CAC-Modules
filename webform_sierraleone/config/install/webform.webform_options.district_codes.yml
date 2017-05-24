@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+id: district_codes
+label: 'District codes'
+category: Geographic
+options: |
+ kailahun: Kailahun
+ kenema: Kenema
+ kono: Kono
+ bombali: Bombali
+ kambia: Kambia
+ koinadugu: Koinadugu
+ port_loko: 'Port Loko'
+ tonkolili: Tonkolili
+ bo: Bo
+ bonthe: Bonthe
+ moyamba: Moyamba
+ pujehun: Pujehun
+ western_rural: 'Western Rural'
+ western_urban': 'Western Urban'

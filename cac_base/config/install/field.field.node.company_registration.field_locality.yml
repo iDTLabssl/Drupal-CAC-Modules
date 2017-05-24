@@ -1,0 +1,23 @@
+uuid: 8bc7f298-ea7b-46e4-a074-15d785281823
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_locality
+    - node.type.company_registration
+  module:
+    - options
+_core:
+  default_config_hash: CT3gXf4cib_6qhf0V8H7Wf_rUICAICns-ip99krLK_Q
+id: node.company_registration.field_locality
+field_name: field_locality
+entity_type: node
+bundle: company_registration
+label: 'Company Locality'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

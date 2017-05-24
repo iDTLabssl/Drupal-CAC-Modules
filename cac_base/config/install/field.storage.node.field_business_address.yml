@@ -1,0 +1,23 @@
+uuid: a4681e23-0b27-4069-90e8-c960a7746921
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Z-O7CYidgVFa4sl25utaNSPI98j1MmgXKV2R__nEOKs
+id: node.field_business_address
+field_name: field_business_address
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

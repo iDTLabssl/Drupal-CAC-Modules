@@ -1,0 +1,21 @@
+uuid: b0755ded-10b3-458a-97fe-0588d97aaedc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tin_number
+    - node.type.company_registration
+_core:
+  default_config_hash: DtcKk5c7Ie2VJdKypWZk7HVBSeHqr7Uf08hWDSU4As4
+id: node.company_registration.field_tin_number
+field_name: field_tin_number
+entity_type: node
+bundle: company_registration
+label: 'TIN Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

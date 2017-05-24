@@ -1,0 +1,22 @@
+uuid: 6880de5a-d79f-4c95-9fcb-a317dcb5314b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: s8hpmRstWA75dZ5bebdirZvLpkEi-rSkq3tOxlp9wmE
+id: node.field_next_submission_of_return
+field_name: field_next_submission_of_return
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

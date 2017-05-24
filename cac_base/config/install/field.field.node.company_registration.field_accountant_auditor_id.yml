@@ -1,0 +1,30 @@
+uuid: b7814443-3309-43e7-add8-7ee2f963b2c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accountant_auditor_id
+    - node.type.company_contact
+    - node.type.company_registration
+_core:
+  default_config_hash: m1qW885Loe76Hfeybq3Nc9_wZyXzTUTdqty7Ra5iASo
+id: node.company_registration.field_accountant_auditor_id
+field_name: field_accountant_auditor_id
+entity_type: node
+bundle: company_registration
+label: Accountant/Auditor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company_contact: company_contact
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

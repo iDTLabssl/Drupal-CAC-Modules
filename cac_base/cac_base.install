@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Install file for cac_base.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * We don't want users to be able to delete our company content
+ * type. So therefore we have to tell Drupal that this is the case. This
+ * can't be done in the content type's configuration YAML file, so we have to
+ * do it in code, here.
+ *
+ * @ingroup cac_base
+ */
+function cac_base_install() {
+  // Do not allow the locked content type to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  $locked['company_registration'] = 'company_registration';
+  $locked['company_contact'] = 'company_contact';
+  Drupal::state()->set('node.type.locked', $locked);
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Our content types will live on in the Drupal installation, even after this
+ * module is uninstalled. This is a good thing, since it allows the user to
+ * make decisions about their fate. Therefore we should give the user the
+ * option of deleting them.
+ *
+ * Since we told Drupal that our company is locked, we now have
+ * to tell it to unlock.
+ *
+ * @ingroup cac_base
+ */
+function cac_base_uninstall() {
+  // Allow company to be deleted.
+  $locked = Drupal::state()->get('node.type.locked');
+  unset($locked['company_registration']);
+  unset($locked['company_contact']);
+  Drupal::state()->set('node.type.locked', $locked);
+}

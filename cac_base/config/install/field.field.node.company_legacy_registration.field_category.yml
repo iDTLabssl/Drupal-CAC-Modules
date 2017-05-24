@@ -1,0 +1,21 @@
+uuid: e2198e2c-be2c-49e0-8b63-423ddc989bb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.company_legacy_registration
+_core:
+  default_config_hash: 6yj1yzMGvzU_PzzF8CfwqYqcVQr3vrajbrnKvqCIOKw
+id: node.company_legacy_registration.field_category
+field_name: field_category
+entity_type: node
+bundle: company_legacy_registration
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

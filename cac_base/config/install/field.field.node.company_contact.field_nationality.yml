@@ -1,0 +1,23 @@
+uuid: 43ef094e-7bbc-4ced-8d54-fc69690f4c6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nationality
+    - node.type.company_contact
+_core:
+  default_config_hash: uAlFYF16GZlzPngzSd6fHLnLARjB_XKBqEEbGE9uLTE
+id: node.company_contact.field_nationality
+field_name: field_nationality
+entity_type: node
+bundle: company_contact
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Sierra Leone'
+default_value_callback: ''
+settings: {  }
+field_type: string

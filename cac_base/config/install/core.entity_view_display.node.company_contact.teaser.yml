@@ -1,0 +1,36 @@
+uuid: a6d6373d-2945-4f34-aa35-b8d8aaa20d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company_contact.field_address
+    - field.field.node.company_contact.field_appointed_on
+    - field.field.node.company_contact.field_appointment_end
+    - field.field.node.company_contact.field_company
+    - field.field.node.company_contact.field_email
+    - field.field.node.company_contact.field_nationality
+    - field.field.node.company_contact.field_phone_number
+    - field.field.node.company_contact.field_type
+    - node.type.company_contact
+  module:
+    - user
+_core:
+  default_config_hash: WhKn78EA-_yIhIEEPRWaGo7uM0B8VbxvbHR_eKyl4Zc
+id: node.company_contact.teaser
+targetEntityType: node
+bundle: company_contact
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_appointed_on: true
+  field_appointment_end: true
+  field_company: true
+  field_email: true
+  field_nationality: true
+  field_phone_number: true
+  field_type: true

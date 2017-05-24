@@ -1,0 +1,23 @@
+uuid: d5887362-62a0-4b2c-a8a4-463011797c43
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: LSr4D9tOE0UxXgUsBsnSPLpadpGoRBLylbbUG5JhkUw
+id: node.field_tin_number
+field_name: field_tin_number
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

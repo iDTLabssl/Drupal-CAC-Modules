@@ -1,0 +1,22 @@
+uuid: af554480-af20-49a2-bd5e-5489fb060c5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+_core:
+  default_config_hash: hJmo4a3NMbktleGNj8iENeyCNTerJ16giqlQwkDEXJg
+id: node.field_can_be_managed_by
+field_name: field_can_be_managed_by
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

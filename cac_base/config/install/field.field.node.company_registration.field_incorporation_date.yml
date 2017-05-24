@@ -1,0 +1,23 @@
+uuid: 1d87e162-d336-4486-9ba0-e6ed4da12cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_incorporation_date
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: u2eqGdok3bQXlF-i8IApU7StwhRPp0HQ2uCD1-l5-u0
+id: node.company_registration.field_incorporation_date
+field_name: field_incorporation_date
+entity_type: node
+bundle: company_registration
+label: 'Date of Incorporation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

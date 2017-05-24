@@ -1,0 +1,25 @@
+uuid: 7aa06a54-921c-417a-88cf-e7068a5aa1ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_odoo_id
+    - node.type.company_registration
+_core:
+  default_config_hash: uWnQXRfgtlXcfi1aumO3uy8IbVPsp59V9M4mOCeR8W0
+id: node.company_registration.field_odoo_id
+field_name: field_odoo_id
+entity_type: node
+bundle: company_registration
+label: 'Odoo ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

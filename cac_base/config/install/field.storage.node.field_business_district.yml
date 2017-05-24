@@ -1,0 +1,23 @@
+uuid: 5f4708d2-92f5-4ef3-85ca-4c900e2841c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 9u2r4sGS_EK9RHqPZP_u5mYB8F3C03m4k4HpdC61h2A
+id: node.field_business_district
+field_name: field_business_district
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

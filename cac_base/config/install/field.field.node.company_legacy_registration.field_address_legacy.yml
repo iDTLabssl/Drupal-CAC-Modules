@@ -1,0 +1,21 @@
+uuid: 77dc177f-2525-42d9-bd9f-2b6204135860
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_legacy
+    - node.type.company_legacy_registration
+_core:
+  default_config_hash: SGVd9SzjAG8wZsySEBX1Gj0qh9r62pwz5wUjQp5MY2Q
+id: node.company_legacy_registration.field_address_legacy
+field_name: field_address_legacy
+entity_type: node
+bundle: company_legacy_registration
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

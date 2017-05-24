@@ -1,0 +1,31 @@
+uuid: f1736b38-aa45-40f4-addf-2696d25ca53a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director_ids
+    - node.type.company_contact
+    - node.type.company_registration
+_core:
+  default_config_hash: DNg49HD-sXNK8quRMh5jw3AbGgCClkks3Az0j6ihJzg
+id: node.company_registration.field_director_ids
+field_name: field_director_ids
+entity_type: node
+bundle: company_registration
+label: Directors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company_contact: company_contact
+    sort:
+      field: field_appointed_on
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

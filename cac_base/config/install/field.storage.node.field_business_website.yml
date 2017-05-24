@@ -1,0 +1,23 @@
+uuid: 48c5709d-f049-4d6d-aae1-514052255661
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 7Btdc6gPJnXQLxxCXBGimwmI9h4NFjkFQi6owRVOuZc
+id: node.field_business_website
+field_name: field_business_website
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

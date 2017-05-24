@@ -1,0 +1,21 @@
+uuid: 0daec68b-289a-4c74-af2b-673407605640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_district
+    - node.type.company_registration
+_core:
+  default_config_hash: yC9C4W0XPS1Z9Eeg46_T2Szgg721fREC1TRPPyrg6RM
+id: node.company_registration.field_business_district
+field_name: field_business_district
+entity_type: node
+bundle: company_registration
+label: 'Business Contact - District'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

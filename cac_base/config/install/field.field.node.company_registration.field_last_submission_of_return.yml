@@ -1,0 +1,23 @@
+uuid: 1ba803da-17b4-4d35-9ee2-e964bd3461af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_submission_of_return
+    - node.type.company_registration
+  module:
+    - datetime
+_core:
+  default_config_hash: vE4Nb7dn0G_--Z6xay7xbIU1xY5oa67--9s_Ob4lZCw
+id: node.company_registration.field_last_submission_of_return
+field_name: field_last_submission_of_return
+entity_type: node
+bundle: company_registration
+label: 'Last Submission of Return'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

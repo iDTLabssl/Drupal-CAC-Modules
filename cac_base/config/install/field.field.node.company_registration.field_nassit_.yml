@@ -1,0 +1,21 @@
+uuid: 8ad5ea72-b3dd-4ac6-bced-37b28dd3aa8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nassit_
+    - node.type.company_registration
+_core:
+  default_config_hash: Xhaer100-0ksdlW-PVlfBKCJTUQVGltXLrN0il1pnzk
+id: node.company_registration.field_nassit_
+field_name: field_nassit_
+entity_type: node
+bundle: company_registration
+label: 'Nassit #'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

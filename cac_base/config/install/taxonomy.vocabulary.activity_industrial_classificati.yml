@@ -1,0 +1,11 @@
+uuid: b3600ed3-feb5-4296-a3e2-c3ec9f0f6634
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aIfO3OZ1TIH_tifN5CEWHeYiqcr-f3JvKZq81DiSh_0
+name: 'Activity/Industrial Classifications'
+vid: activity_industrial_classificati
+description: ''
+hierarchy: 0
+weight: 0

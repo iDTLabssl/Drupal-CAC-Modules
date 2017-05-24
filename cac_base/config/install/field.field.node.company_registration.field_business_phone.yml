@@ -1,0 +1,21 @@
+uuid: 5c3f7ed6-3d7a-48f7-9994-7778212125a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_phone
+    - node.type.company_registration
+_core:
+  default_config_hash: 2jZQpz20U5e7QMLe3VQ1ZcGb-urthAkrswzanjhJk4E
+id: node.company_registration.field_business_phone
+field_name: field_business_phone
+entity_type: node
+bundle: company_registration
+label: 'Business Contact - Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

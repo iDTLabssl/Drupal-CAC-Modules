@@ -1,0 +1,21 @@
+uuid: 5a32db38-eb21-470f-b593-97bc54c2aca2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_email
+    - node.type.company_registration
+_core:
+  default_config_hash: gMoK0CjASlNju7brfpL9Q-8KXHy_jsGfdnZA4Qc-UuM
+id: node.company_registration.field_business_email
+field_name: field_business_email
+entity_type: node
+bundle: company_registration
+label: 'Business Contact - Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

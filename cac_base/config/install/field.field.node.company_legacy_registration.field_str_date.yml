@@ -1,0 +1,21 @@
+uuid: c5d88ddd-6dea-49d7-89f9-26b9173af8b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_str_date
+    - node.type.company_legacy_registration
+_core:
+  default_config_hash: IjGyxlqShjonDqgMvp9sluxvvqciXfPCDd7AIyENWX0
+id: node.company_legacy_registration.field_str_date
+field_name: field_str_date
+entity_type: node
+bundle: company_legacy_registration
+label: 'Incorporation Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

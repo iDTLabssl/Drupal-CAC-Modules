@@ -1,0 +1,23 @@
+uuid: 11dfa6a2-ef3c-4190-a37b-5d6c20cec6e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: WKZW5d5HdWf7jhoSPWrI7fxPBG8Joklt9-yTtvKw5FI
+id: node.field_nassit_
+field_name: field_nassit_
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

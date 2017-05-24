@@ -1,0 +1,21 @@
+uuid: 05b30892-2d83-4c66-9344-51a4bd7154ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_postal_address
+    - node.type.company_registration
+_core:
+  default_config_hash: aoErSCKZUG7F98JBNWAs3FVdsLMImuacegE4ANTCRes
+id: node.company_registration.field_postal_address
+field_name: field_postal_address
+entity_type: node
+bundle: company_registration
+label: 'Postal Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
