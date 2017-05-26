@@ -1,0 +1,32 @@
+uuid: 03640e8f-b391-4979-9d67-1f50dc971db5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_webform_submission
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__user_webform_submission_block_1
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:user_webform_submission-block_1'
+settings:
+  id: 'views_block:user_webform_submission-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping:
+    uid: '@user.current_user_context:current_user'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user\r\n/user/*"
+    negate: false
+    context_mapping: {  }
