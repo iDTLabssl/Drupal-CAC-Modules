@@ -35,6 +35,14 @@ class ContactCac extends WebformContact {
       '#type' => 'number',
       '#title' => t('Shares %'),
     ];
+    $elements['occupation'] = [
+      '#type' => 'textfield',
+      '#title' => t('Occupation'),
+    ];
+    $elements['other_directorship'] = [
+      '#type' => 'textfield',
+      '#title' => t('Particulars of other Directorship'),
+    ];
 
     $elements['identification_fid'] = [
       '#title' => t('Identification'),
