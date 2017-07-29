@@ -43,14 +43,11 @@ class ContactCac extends WebformContact {
       '#type' => 'textfield',
       '#title' => t('Particulars of other Directorship'),
     ];
-
-    $elements['identification_fid'] = [
-      '#title' => t('Identification'),
-      '#type' => 'managed_file',
-      '#upload_validators' => [
-        'file_validate_extensions' => ['gif png jpg jpeg'],
-      ],
+    $elements['appointment_date'] = [
+      '#type' => 'date',
+      '#title' => t('Date of Appointment'),
     ];
+
 
 
     return $elements;
