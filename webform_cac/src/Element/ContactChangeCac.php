@@ -9,7 +9,7 @@ use Drupal\webform\Element\WebformContact;
  *
  * @FormElement("webform_contact_cac")
  */
-class ContactCac extends WebformContact {
+class ContactChangeCac extends WebformContact {
 
   /**
    * {@inheritdoc}
@@ -17,13 +17,13 @@ class ContactCac extends WebformContact {
   public static function getCompositeElements() {
     $elements = [];
     $elements += parent::getCompositeElements();
-    $elements['dob'] = [
+    $elements['date_action'] = [
       '#type' => 'date',
-      '#title' => t('Date of Birth'),
+      '#title' => t('Date of Action'),
     ];
-    $elements['gender'] = [
+    $elements['type'] = [
       '#type' => 'select',
-      '#title' => t('Gender'),
+      '#title' => t('Director/Secretary'),
       '#options' => 'gender',
     ];
     $elements['nationality'] = [
@@ -32,7 +32,7 @@ class ContactCac extends WebformContact {
       '#options' => 'country_names',
     ];
     $elements['shares'] = [
-      '#type' => 'number',
+      '#type' => 'textfield',
       '#title' => t('Shares %'),
     ];
 

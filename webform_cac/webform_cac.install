@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the book module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function webform_cac_install() {
+  // Create field storage for the 'Highlight' base field.
+  $definition = \Drupal::service('entity_field.manager')->getFieldStorageDefinitions('webform_submission')['processing_state'];
+  \Drupal::service('field_storage_definition.listener')->onFieldStorageDefinitionCreate($definition);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function webform_cac_uninstall() {
+  $definition = \Drupal::service('entity.last_installed_schema.repository')->getLastInstalledFieldStorageDefinitions('webform_submission')['processing_state'];
+  \Drupal::service('field_storage_definition.listener')->onFieldStorageDefinitionDelete($definition);
+}

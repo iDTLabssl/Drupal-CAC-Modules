@@ -4,6 +4,8 @@ namespace Drupal\webform_cac\Plugin\WebformElement;
 
 use Drupal\Core\Form\FormState;
 use Drupal\webform\Plugin\WebformElement\WebformCompositeBase;
+use Drupal\webform\WebformSubmissionInterface;
+
 use Drupal\webform_cac\Element\ContactCac;
 
 /**
@@ -24,24 +26,25 @@ class WebformContactCac extends WebformCompositeBase {
   /**
    * {@inheritdoc}
    */
-  protected function getCompositeElements() {
-    $elements = ContactCac::getCompositeElements();
-    return $elements;
-  }
+//  public function getCompositeElements() {
+//    $elements = ContactCac::getCompositeElements();
+//    return $elements;
+//  }
+
+//  /**
+//   * {@inheritdoc}
+//   */
+//  public function getInitializedCompositeElement(array &$element) {
+//    $form_state = new FormState();
+//    $form_completed = [];
+//    return ContactCac::processWebformComposite($element, $form_state, $form_completed);
+//  }
 
   /**
    * {@inheritdoc}
    */
-  protected function getInitializedCompositeElement(array &$element) {
-    $form_state = new FormState();
-    $form_completed = [];
-    return ContactCac::processWebformComposite($element, $form_state, $form_completed);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  protected function formatTextItemValue(array $element, array $value) {
+  protected function formatTextItemValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+    $value = $this->getValue($element, $webform_submission, $options);
     $lines = [];
     if (!empty($value['name'])) {
       $lines['name'] = $value['name'];
@@ -49,7 +52,7 @@ class WebformContactCac extends WebformCompositeBase {
     if (!empty($value['company'])) {
       $lines['company'] = $value['company'];
     }
-    $lines += parent::formatTextItemValue($element, $value);
+    $lines += parent::formatTextItemValue($element, $webform_submission, $options);
     if (!empty($value['email'])) {
       $lines['email'] = $value['email'];
     }

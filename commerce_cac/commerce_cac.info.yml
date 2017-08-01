@@ -1,0 +1,16 @@
+name: Commerce CAC Integration
+type: module
+description: Adds payments and commerce integration for the CAC
+package: Corporate Affairs Commission
+dependencies:
+  - drupal:user
+  - drupal:block
+  - drupal:node
+  - cac_base
+  - webform
+  - commerce
+  - commerce_payment
+  - commerce_cart
+  - commerce_checkout
+core: '8.x'
+project: 'commerce_cac'

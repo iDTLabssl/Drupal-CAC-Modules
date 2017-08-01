@@ -6,6 +6,15 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityInterface;
+
+const STATE_PENDING = 'pending';
+const STATE_PROCESSING = 'processing';
+const STATE_DONE = 'done';
+const STATE_REJECTED = 'rejected';
+
 
 /**
  * Implements hook_help().
@@ -21,3 +30,133 @@ function webform_cac_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function webform_cac_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  // Add a 'State field' to all webform submissions
+  if ($entity_type->id() === 'webform_submission') {
+
+    // The values shown in options are 'administrator' and 'user'.
+    $fields['processing_state'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Processing State'))
+      ->setDescription(t('The state of the submission.'))
+      ->setSettings([
+        'allowed_values' => [
+          STATE_PENDING => 'Pending',
+          STATE_DONE => 'Completed',
+          STATE_PROCESSING => 'Processing',
+          STATE_REJECTED => 'Rejected',
+        ],
+      ])
+      // Set the default value of this field to 'user'.
+      ->setDefaultValue('pending');
+/*      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -2,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'options_select',
+        'weight' => -2,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);*/
+
+  }
+
+  return $fields;
+}
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function webform_cac_entity_type_build(array &$entity_types) {
+  /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+  $entity_types['webform_submission']
+    ->setFormClass('accept', 'Drupal\webform_cac\Form\WebformSubmissionProcessingAcceptForm')
+    ->setLinkTemplate('accept-form', '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/accept')
+    ->setFormClass('reset', 'Drupal\webform_cac\Form\WebformSubmissionProcessingResetForm')
+    ->setLinkTemplate('reset-form', '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/reset')
+    ->setFormClass('done', 'Drupal\webform_cac\Form\WebformSubmissionProcessingDoneForm')
+    ->setLinkTemplate('done-form', '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/done')
+    ->setFormClass('reject', 'Drupal\webform_cac\Form\WebformSubmissionProcessingRejectedForm')
+    ->setLinkTemplate('reject-form', '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/rejected');
+}
+
+
+/**
+ * Implements hook_entity_operation().
+ */
+
+function webform_cac_entity_operation(EntityInterface $entity) {
+  $operations = [];
+
+  if ($entity->getEntityTypeId() === 'webform_submission' && $entity->access('update')) {
+    $route_parameters = ['webform' => $entity->getWebform()->id(), 'webform_submission' => $entity->id()];
+
+    if ($entity->get('processing_state')->value == STATE_PENDING) {
+      $operations["operation_accept"] = [
+        'title' => t('Accept'),
+        'url' => \Drupal\Core\Url::fromRoute('entity.webform_submission.accept_form', $route_parameters),
+        'weight' => 22,
+      ];
+      $operations["operation_reject"] = [
+        'title' => t('Reject'),
+        'url' => \Drupal\Core\Url::fromRoute('entity.webform_submission.reject_form', $route_parameters),
+        'weight' => 22,
+      ];
+    }
+    elseif ($entity->get('processing_state')->value == STATE_PROCESSING) {
+      $operations["operation_done"] = [
+        'title' => t('Completed'),
+        'url' => \Drupal\Core\Url::fromRoute('entity.webform_submission.done_form', $route_parameters),
+        'weight' => 22,
+      ];
+      $operations["operation_reject"] = [
+        'title' => t('Reject'),
+        'url' => \Drupal\Core\Url::fromRoute('entity.webform_submission.reject_form', $route_parameters),
+        'weight' => 30,
+      ];
+    }
+    else {
+      $operations["operation_reset"] = [
+        'title' => t('Requeue'),
+        'url' => \Drupal\Core\Url::fromRoute('entity.webform_submission.reset_form', $route_parameters),
+        'weight' => 31,
+      ];
+    }
+  }
+  return $operations;
+}
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function webform_cac_theme_registry_alter(&$theme_registry) {
+  $path = drupal_get_path('module', 'webform_cac') ;
+  $theme_registry['webform_submission_information']['path'] = $path . '/templates';
+  $theme_registry['webform_submission_text']['path'] = $path . '/templates';
+}
+
+
+
+/**
+ * Prepares variables for webform submission information template.
+ *
+ * Default template: webform-submission-information.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing the following key:
+ *   - webform_submission: A webform submission.
+ */
+function webform_cac_preprocess_webform_submission_information(array &$variables) {
+  /** @var \Drupal\webform\WebformSubmissionInterface $webform_submission */
+  $webform_submission = $variables['webform_submission'];
+  $variables['processing_state'] = ucfirst($webform_submission->get('processing_state')->value);
+}
+

@@ -1,0 +1,31 @@
+entity.webform_submission.accept_form:
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/accept'
+  defaults:
+    _entity_form: 'webform_submission.accept'
+    _title: 'Accept webform submission for processing'
+  requirements:
+      _entity_access: 'webform_submission.update_any'
+
+entity.webform_submission.reject_form:
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/reject'
+  defaults:
+    _entity_form: 'webform_submission.reject'
+    _title: 'Reject webform submission'
+  requirements:
+      _entity_access: 'webform_submission.update_any'
+
+entity.webform_submission.done_form:
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/done'
+  defaults:
+    _entity_form: 'webform_submission.done'
+    _title: 'Mark webform submission as completed'
+  requirements:
+      _entity_access: 'webform_submission.update_any'
+
+entity.webform_submission.reset_form:
+  path: '/admin/structure/webform/manage/{webform}/submission/{webform_submission}/reset'
+  defaults:
+    _entity_form: 'webform_submission.reset'
+    _title: 'Accept webform submission for processing'
+  requirements:
+      _entity_access: 'webform_submission.update_any'

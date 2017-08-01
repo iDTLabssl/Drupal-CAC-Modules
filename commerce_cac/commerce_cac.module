@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Handles payments for the CAC project
+ */
+
+
+/** Implements hook_entity_base_field_info().
+ */
+function commerce_cac_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  // Add a 'State field' to all webform submissions
+  if ($entity_type->id() === 'webform_submission') {
+
+    // The values shown in options are 'administrator' and 'user'.
+    $fields['processing_state'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Processing State'))
+      ->setDescription(t('The state of the submission.'))
+      ->setSettings([
+        'allowed_values' => [
+          STATE_PENDING => 'Pending',
+          STATE_DONE => 'Completed',
+          STATE_PROCESSING => 'Processing',
+          STATE_REJECTED => 'Rejected',
+        ],
+      ])
+      // Set the default value of this field to 'user'.
+      ->setDefaultValue('pending');
+    /*      ->setDisplayOptions('view', [
+            'label' => 'above',
+            'type' => 'string',
+            'weight' => -2,
+          ])
+          ->setDisplayOptions('form', [
+            'type' => 'options_select',
+            'weight' => -2,
+          ])
+          ->setDisplayConfigurable('form', TRUE)
+          ->setDisplayConfigurable('view', TRUE);*/
+
+  }
+
+  return $fields;
+}
+
+
+/**
+ * hook_entity_update
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *
+ * React to webform submissions being saved
+ */
+function commerce_cac_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == "webform_submission") {
+    $in_cart = FALSE;
+    if (!$entity->get("in_draft")->value == FALSE && !$in_cart) {
+      /** @var \Drupal\commerce_order\Entity\OrderItemInterface $order_item */
+      $order_item = $this->entity;
+      /** @var \Drupal\commerce\PurchasableEntityInterface $purchased_entity */
+      $purchased_entity = $order_item->getPurchasedEntity();
+
+      $order_type_id = $this->orderTypeResolver->resolve($order_item);
+      $store = $this->selectStore($purchased_entity);
+      $
+      cart = $this->cartProvider->getCart($order_type_id, $store);
+      if (!$cart) {
+        $cart = $this->cartProvider->createCart($order_type_id, $store);
+      }
+      $this->cartManager->addOrderItem($cart, $order_item, $form_state->get(['settings', 'combine']));
+      // Other submit handlers might need the cart ID.
+      $form_state->set('cart_id', $cart->id());
+
+      drupal_set_message($this->t('@entity added to @cart-link.', [
+        '@entity' => $purchased_entity->label(),
+        '@cart-link' => Link::createFromRoute($this->t('your cart', [], ['context' => 'cart link']), 'commerce_cart.page')->toString(),
+      ]));
+    }
+  }
+}

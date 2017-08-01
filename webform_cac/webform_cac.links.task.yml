@@ -1,0 +1,22 @@
+# Manage
+
+entity.webform_submission.accept_form:
+  title: 'Accept'
+  route_name: entity.webform_submission.accept_form
+  base_route: entity.webform_submission.canonical
+
+entity.webform_submission.reject_form:
+  title: 'Reject'
+  route_name: entity.webform_submission.reject_form
+  base_route: entity.webform_submission.canonical
+
+entity.webform_submission.done_form:
+  title: 'Complete'
+  route_name: entity.webform_submission.done_form
+  base_route: entity.webform_submission.canonical
+
+entity.webform_submission.reset_form:
+  title: 'Requeue'
+  route_name: entity.webform_submission.reset_form
+  base_route: entity.webform_submission.canonical
+
