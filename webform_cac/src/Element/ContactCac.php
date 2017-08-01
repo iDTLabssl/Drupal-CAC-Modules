@@ -2,21 +2,69 @@
 
 namespace Drupal\webform_cac\Element;
 
-use Drupal\webform\Element\WebformContact;
+use Drupal\webform\Element\WebformCompositeBase;
 
 /**
  * Provides a form element for a contact element
  *
  * @FormElement("webform_contact_cac")
  */
-class ContactCac extends WebformContact {
+class ContactCac extends WebformCompositeBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getInfo() {
+    return parent::getInfo() + ['#theme' => 'webform_composite_contact_cac'];
+  }
 
   /**
    * {@inheritdoc}
    */
   public static function getCompositeElements() {
     $elements = [];
-    $elements += parent::getCompositeElements();
+    $elements['name'] = [
+      '#type' => 'textfield',
+      '#title' => t('Name'),
+    ];
+    $elements['company'] = [
+      '#type' => 'textfield',
+      '#title' => t('Company'),
+    ];
+    $elements['email'] = [
+      '#type' => 'email',
+      '#title' => t('Email'),
+    ];
+    $elements['phone'] = [
+      '#type' => 'tel',
+      '#title' => t('Phone'),
+    ];
+    $elements['address'] = [
+      '#type' => 'textfield',
+      '#title' => t('Address'),
+    ];
+    $elements['address_2'] = [
+      '#type' => 'textfield',
+      '#title' => t('Address 2'),
+    ];
+    $elements['city'] = [
+      '#type' => 'textfield',
+      '#title' => t('City/Town'),
+    ];
+    $elements['state_province'] = [
+      '#type' => 'select',
+      '#title' => t('District'),
+      '#options' => 'state_province_names',
+    ];
+    $elements['postal_code'] = [
+      '#type' => 'textfield',
+      '#title' => t('Zip/Postal Code'),
+    ];
+    $elements['country'] = [
+      '#type' => 'select',
+      '#title' => t('Country'),
+      '#options' => 'country_names',
+    ];
     $elements['dob'] = [
       '#type' => 'date',
       '#title' => t('Date of Birth'),
@@ -47,15 +95,6 @@ class ContactCac extends WebformContact {
       '#type' => 'date',
       '#title' => t('Date of Appointment'),
     ];
-
-
-
-
-
-
-
-
-
     return $elements;
   }
 

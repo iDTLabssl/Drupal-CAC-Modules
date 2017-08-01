@@ -26,25 +26,37 @@ class WebformContactCac extends WebformCompositeBase {
   /**
    * {@inheritdoc}
    */
-//  public function getCompositeElements() {
-//    $elements = ContactCac::getCompositeElements();
-//    return $elements;
-//  }
-
-//  /**
-//   * {@inheritdoc}
-//   */
-//  public function getInitializedCompositeElement(array &$element) {
-//    $form_state = new FormState();
-//    $form_completed = [];
-//    return ContactCac::processWebformComposite($element, $form_state, $form_completed);
-//  }
+  protected function formatHtmlItemValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+    $lines = $this->formatTextItemValue($element, $webform_submission, $options);
+    if (!empty($lines['email'])) {
+      $lines['email'] = [
+        '#type' => 'link',
+        '#title' => $lines['email'],
+        '#url' => \Drupal::pathValidator()->getUrlIfValid('mailto:' . $lines['email']),
+      ];
+    }
+    return $lines;
+  }
 
   /**
    * {@inheritdoc}
    */
   protected function formatTextItemValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
     $value = $this->getValue($element, $webform_submission, $options);
+
+    $location = '';
+    if (!empty($value['city'])) {
+      $location .= $value['city'];
+    }
+    if (!empty($value['state_province'])) {
+      $location .= ($location) ? ', ' : '';
+      $location .= $value['state_province'];
+    }
+    if (!empty($value['postal_code'])) {
+      $location .= ($location) ? '. ' : '';
+      $location .= $value['postal_code'];
+    }
+
     $lines = [];
     if (!empty($value['name'])) {
       $lines['name'] = $value['name'];
@@ -52,7 +64,18 @@ class WebformContactCac extends WebformCompositeBase {
     if (!empty($value['company'])) {
       $lines['company'] = $value['company'];
     }
-    $lines += parent::formatTextItemValue($element, $webform_submission, $options);
+    if (!empty($value['address'])) {
+      $lines['address'] = $value['address'];
+    }
+    if (!empty($value['address_2'])) {
+      $lines['address_2'] = $value['address_2'];
+    }
+    if ($location) {
+      $lines['location'] = $location;
+    }
+    if (!empty($value['country'])) {
+      $lines['country'] = $value['country'];
+    }
     if (!empty($value['email'])) {
       $lines['email'] = $value['email'];
     }
@@ -64,6 +87,32 @@ class WebformContactCac extends WebformCompositeBase {
     }
     if (!empty($value['other_directorship'])) {
       $lines['other_directorship'] = $value['other_directorship'];
+    }
+    if (!empty($value['dob'])) {
+      $lines['dob'] = $value['dob'];
+    }
+    if (!empty($value['gender'])) {
+      $lines['gender'] = $value['gender'];
+    }
+
+    if (!empty($value['nationality'])) {
+      $lines['nationality'] = $value['nationality'];
+    }
+
+    if (!empty($value['shares'])) {
+      $lines['shares'] = $value['shares'];
+    }
+
+    if (!empty($value['occupation'])) {
+      $lines['occupation'] = $value['occupation'];
+    }
+
+    if (!empty($value['other_directorship'])) {
+      $lines['other_directorship'] = $value['other_directorship'];
+    }
+
+    if (!empty($value['appointment_date'])) {
+      $lines['appointment_date'] = $value['appointment_date'];
     }
     return $lines;
   }
