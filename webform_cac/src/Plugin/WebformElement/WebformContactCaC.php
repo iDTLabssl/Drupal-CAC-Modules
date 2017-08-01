@@ -59,6 +59,12 @@ class WebformContactCac extends WebformCompositeBase {
     if (!empty($value['phone'])) {
       $lines['phone'] = $value['phone'];
     }
+    if (!empty($value['occupation'])) {
+      $lines['occupation'] = $value['occupation'];
+    }
+    if (!empty($value['other_directorship'])) {
+      $lines['other_directorship'] = $value['other_directorship'];
+    }
     return $lines;
   }
 
