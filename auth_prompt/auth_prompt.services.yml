@@ -1,0 +1,5 @@
+services:
+  auth_prompt.event_subscriber:
+    class: Drupal\auth_prompt\EventSubscriber\AuthPromptSubscriber
+    tags:
+      - {name: event_subscriber}
