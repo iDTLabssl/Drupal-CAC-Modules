@@ -1,0 +1,14 @@
+{
+  "name": "drupal/auth_prompt",
+  "type": "drupal-module",
+  "description": "Auth prompt module for prompting users in Drupal 8.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/auth_prompt",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/auth_prompt",
+    "source": "http://cgit.drupalcode.org/auth_prompt"
+  },
+  "require": { }
+}

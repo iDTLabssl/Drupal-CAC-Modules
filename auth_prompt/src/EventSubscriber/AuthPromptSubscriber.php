@@ -14,20 +14,28 @@ use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class auth_prompt_Subscriber implements EventSubscriberInterface {
-
-  public function checkForRedirection(GetResponseEvent $event) {
-    if ($event->getRequest()->query->get('redirect-me')) {
-      $event->setResponse(new RedirectResponse('/user/login'));
-    }
-  }
+/**
+ * Class ExampleEventSubScriber.
+ *
+ * @package Drupal\auth_prompt
+ */
+class AuthPromptSubscriber implements EventSubscriberInterface {
 
   /**
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    $events[KernelEvents::REQUEST][] = array('checkForRedirection');
+    $events[KernelEvents::REQUEST][] = array('onKernelRequestAuthenticate', 300);
     return $events;
+  }
+
+
+  /**
+   * Subscriber Callback for the event.
+   * @param AuthPrompt $event
+   */
+  public function checkForAnonUser(KernelEvents $event) {
+    drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services.'), 'warning');
   }
 
 }
