@@ -1,0 +1,5 @@
+services:
+    cac_base_event_subscriber:
+        class: Drupal\cac_base\EventSubscriber\AnonyLoginPromptSubscriber
+        tags:
+            - {name: event_subscriber}
