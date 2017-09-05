@@ -1,6 +1,0 @@
-auth_prompt:
-  path: 'modules/auth_prompt'
-  defaults:
-    _title: 'Auth Prompt'
-  requirements:
-    _permission: 'access content'

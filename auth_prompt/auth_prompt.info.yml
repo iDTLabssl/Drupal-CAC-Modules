@@ -1,6 +1,0 @@
-name: Auth Prompt
-type: module
-description: Auth Prompt Message
-package: message
-core: 8.x
-project: Auth Prompt
