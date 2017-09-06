@@ -20,7 +20,7 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
   public function anonymousLoginPrompt(FilterResponseEvent $event) {
     $request = $event->getRequest();
     $redirect_url = $request->server->get('REQUEST_URI', null);
-    drupal_set_message(t('fffffffffff'), 'warning');
+    drupal_set_message(t('Please sign in or register an account to access all the services offered by the Commission'), 'status');
   }
 
   /**
