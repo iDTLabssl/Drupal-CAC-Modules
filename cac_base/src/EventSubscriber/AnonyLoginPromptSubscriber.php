@@ -41,7 +41,7 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
    *   An array of event listener definitions.
    */
   public static function getSubscribedEvents() {
-    $events[KernelEvents::RESPONSE][] = ['anonymousLoginPrompt'];
-    return $events;
+     $events[KernelEvents::RESPONSE][] = ['anonymousLoginPrompt'];
+     return $events;
   }
 }

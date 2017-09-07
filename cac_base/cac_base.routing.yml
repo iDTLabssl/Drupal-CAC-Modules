@@ -8,7 +8,7 @@ config_cac_base.description:
 anonyloginprompt.services:
  path: '/node/69'
  defaults:
-   _title: 'Login Prompt'
+   _title: 'Services'
    _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
  requirements:
     _user_is_logged_in: 'FALSE'
@@ -16,7 +16,7 @@ anonyloginprompt.services:
 anonyloginprompt.service_page:
  path: '/node/97'
  defaults:
-   _title: 'Login Prompt'
+   _title: 'Services'
    _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
  requirements:
     _user_is_logged_in: 'FALSE'

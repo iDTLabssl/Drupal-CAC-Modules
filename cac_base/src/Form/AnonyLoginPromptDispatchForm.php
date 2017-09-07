@@ -29,19 +29,8 @@ class AnonyLoginPromptDispatchForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['name'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('Reference'),
-      '#description' => $this->t('Reminds the anonymous user to sign and or register an account.'),
-      '#maxlength' => 64,
-      '#size' => 64,
-    );
-    $form['dispatch'] = array(
-      '#type' => 'submit',
-      '#value' => $this->t('Dispatch'),
-    );
-    return $form;
-  }
+      drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
+   }
 
   /**
    * {@inheritdoc}
@@ -53,3 +42,4 @@ class AnonyLoginPromptDispatchForm extends FormBase {
     $dispatcher->dispatch(AnonyLoginPrompt::SUBMIT, $event);
   }
 }
+
