@@ -21,9 +21,9 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    $events[ConfigEvents::SAVE][] = array('onSavingConfig', 800);
-    $events[AnonyLoginPrompt::SUBMIT][] = array('anonymousLoginPrompt', 800);
-    return $events;
+      $events[ConfigEvents::SAVE][] = array('onSavingConfig', 800);
+      $events[AnonyLoginPrompt::SUBMIT][] = array('anonymousLoginPrompt', 800);
+      return $events;
   }
 
   /**
@@ -31,7 +31,9 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
    * @param AnonyLoginPrompt $event
    */
   public function anonymousLoginPrompt(AnonyLoginPrompt $event) {
-    drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
+    if (\Drupal::currentUser()->isAnonymous()) {
+       drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
+    }
   }
 
   /**

@@ -11,7 +11,7 @@ anonyloginprompt.services:
    _title: 'Services'
    _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
  requirements:
-    _user_is_logged_in: 'FALSE'
+    _permission: 'access content'
 
 anonyloginprompt.service_page:
  path: '/node/97'
@@ -19,5 +19,5 @@ anonyloginprompt.service_page:
    _title: 'Services'
    _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
  requirements:
-    _user_is_logged_in: 'FALSE'
+    _permission: 'access content'
 

@@ -22,14 +22,18 @@ class AnonyLoginPromptDispatchForm extends FormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'anony_login_dispatch_form';
+    if (\Drupal::currentUser()->isAnonymous()) {
+      return 'anony_login_dispatch_form';
+    }
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
-      drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
+   public function buildForm(array $form, FormStateInterface $form_state) {
+     if (\Drupal::currentUser()->isAnonymous()) {
+       drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'warning');
+     }
    }
 
   /**
@@ -42,4 +46,3 @@ class AnonyLoginPromptDispatchForm extends FormBase {
     $dispatcher->dispatch(AnonyLoginPrompt::SUBMIT, $event);
   }
 }
-
