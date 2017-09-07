@@ -1,26 +1,41 @@
 <?php
+/**
+*@file
+* Contains \Drupal\cac_base\AnonyLoginPromptSubScriber.
+*/
 namespace Drupal\cac_base\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\EventDispatcher\Event;
+use Drupal\Core\Config\ConfigEvents;
+use Drupal\cac_base\AnonyLoginPrompt;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
-use Drupal\Core\Form\drupal_set_message;
-use Drupal\Core\Entity\t;
 /**
- * Redirect .html pages to corresponding Node page.
+ * Class AnonyLoginPromptSubScriber.
+ * Drupal\cac_base
  */
 class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
+  /**
+   * {@inheritdoc}
+   */
+  public static function getSubscribedEvents() {
+    $events[ConfigEvents::SAVE][] = array('onSavingConfig', 800);
+    $events[AnonyLoginPrompt::SUBMIT][] = array('anonymousLoginPrompt', 800);
+    return $events;
+  }
 
   /**
-   *
-   * @param \Symfony\Component\HttpKernel\Event\FilterResponseEvent $event
-   *   The response event.
+   * Subscriber Callback for the event.
+   * @param AnonyLoginPrompt $event
    */
-  public function anonymousLoginPrompt(FilterResponseEvent $event) {
+  public function anonymousLoginPrompt(AnonyLoginPrompt $event) {
     $request = $event->getRequest();
     $redirect_url = $request->server->get('REQUEST_URI', null);
-    drupal_set_message(t('Please sign in or register an account to access all the services offered by the Commission'), 'status');
+    if ($current_user->id() == 0) {
+      drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
+   }
   }
 
   /**

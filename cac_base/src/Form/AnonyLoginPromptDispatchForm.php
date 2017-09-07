@@ -32,7 +32,7 @@ class AnonyLoginPromptDispatchForm extends FormBase {
     $form['name'] = array(
       '#type' => 'textfield',
       '#title' => $this->t('Reference'),
-      '#description' => $this->t('Authentication prompt to an anonymus user of the website.'),
+      '#description' => $this->t('Reminds the anonymous user to sign and or register an account.'),
       '#maxlength' => 64,
       '#size' => 64,
     );
