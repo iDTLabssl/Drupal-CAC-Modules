@@ -54,8 +54,8 @@ function webform_cac_entity_base_field_info(EntityTypeInterface $entity_type) {
         ],
       ])
       // Set the default value of this field to 'user'.
-      ->setDefaultValue('pending');
-/*      ->setDisplayOptions('view', [
+      ->setDefaultValue('pending')
+      ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
         'weight' => -2,
@@ -65,7 +65,7 @@ function webform_cac_entity_base_field_info(EntityTypeInterface $entity_type) {
         'weight' => -2,
       ])
       ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);*/
+      ->setDisplayConfigurable('view', TRUE);
 
   }
 
