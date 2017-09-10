@@ -4,20 +4,3 @@ config_cac_base.description:
     _controller: '\Drupal\cac_base\Controller\NodeTypeCompanyRegistration::description'
   requirements:
     _permission: 'access content'
-
-anonyloginprompt.services:
- path: '/node/69'
- defaults:
-   _title: 'Services'
-   _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
- requirements:
-    _permission: 'access content'
-
-anonyloginprompt.service_page:
- path: '/node/97'
- defaults:
-   _title: 'Services'
-   _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
- requirements:
-    _permission: 'access content'
-

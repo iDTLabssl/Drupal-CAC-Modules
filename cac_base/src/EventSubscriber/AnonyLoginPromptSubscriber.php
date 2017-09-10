@@ -1,39 +1,28 @@
 <?php
-/**
-*@file
-* Contains \Drupal\cac_base\AnonyLoginPromptSubScriber.
-*/
 namespace Drupal\cac_base\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\EventDispatcher\Event;
-use Drupal\Core\Config\ConfigEvents;
-use Drupal\cac_base\AnonyLoginPrompt;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
+use Drupal\Core\Form\drupal_set_message;
+use Drupal\Core\Entity\t;
 /**
- * Class AnonyLoginPromptSubScriber.
- * Drupal\cac_base
+ * Redirect .html pages to corresponding Node page.
  */
 class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
-  /**
-   * {@inheritdoc}
-   */
-  public static function getSubscribedEvents() {
-      $events[ConfigEvents::SAVE][] = array('onSavingConfig', 800);
-      $events[AnonyLoginPrompt::SUBMIT][] = array('anonymousLoginPrompt', 800);
-      return $events;
-  }
 
   /**
-   * Subscriber Callback for the event.
-   * @param AnonyLoginPrompt $event
+   *
+   * @param \Symfony\Component\HttpKernel\Event\FilterResponseEvent $event
+   *   The response event.
    */
-  public function anonymousLoginPrompt(AnonyLoginPrompt $event) {
+  public function anonymousLoginPrompt(FilterResponseEvent $event) {
+    $request = $event->getRequest();
+    $redirect_url = $request->server->get('REQUEST_URI', null);
     if (\Drupal::currentUser()->isAnonymous()) {
-       drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register">Register</a> to access all the services we offer.'), 'status');
-    }
+       drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register"><strong>Register</strong></a> to access all the services we offer.'), 'warning');
+     }
   }
 
   /**
@@ -43,7 +32,7 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
    *   An array of event listener definitions.
    */
   public static function getSubscribedEvents() {
-     $events[KernelEvents::RESPONSE][] = ['anonymousLoginPrompt'];
-     return $events;
+    $events[KernelEvents::RESPONSE][] = ['anonymousLoginPrompt'];
+    return $events;
   }
 }
