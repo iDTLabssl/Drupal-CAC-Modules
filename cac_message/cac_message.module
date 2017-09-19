@@ -1,0 +1,23 @@
+<?php 
+
+function cac_message_preprocess_page(&$variables){
+	$config = \Drupal::config('cac_message.adminsettings');	/*get variable values*/	
+	
+	$message 			 = $config->get('welcome_message');
+	$config_path 	 	 = $config->get('message_path');
+	$config_roles 		 = $config->get('user_roles');
+	$config_message_type = $config->get('display_message_type');	
+
+	/*get current user info*/
+	$current_user 	= \Drupal::currentUser();
+	$current_roles 	= $current_user->getRoles();
+	
+	$check_role_exist 	= array_intersect($current_roles, array_values($config_roles));	
+	$current_path 		= \Drupal::service('path.current')->getPath(); //get current path	
+	$current_path_alias = \Drupal::service('path.alias_manager')->getAliasByPath($current_path); // get current path alias			
+
+	foreach (explode("\n", $config_path) as $key => $value) {
+		if ( preg_replace( "/\r|\n/", "", $value)  == $current_path_alias)
+			drupal_set_message(t($message['value']), $config_message_type, FALSE);
+	}
+}

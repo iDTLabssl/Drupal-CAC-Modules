@@ -1,0 +1,6 @@
+name: CAC Message
+type: module
+description: Provides custom utilities to display configurable message on specific path
+package: Corporate Affairs Commission
+core: '8.x'
+project: 'cac'
