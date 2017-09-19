@@ -8,7 +8,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface; 
 use Drupal\Core\Routing\RouteProviderInterface;
 
-class ServiceForm extends ConfigFormBase {  
+class CacMessageForm extends ConfigFormBase {  
 /**  
    * {@inheritdoc}  
    */  
