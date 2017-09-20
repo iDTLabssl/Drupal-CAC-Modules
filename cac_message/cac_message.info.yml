@@ -4,3 +4,4 @@ description: Provides custom utilities to display configurable message on specif
 package: Corporate Affairs Commission
 core: '8.x'
 project: 'cac'
+configure: cac_message.admin_settings_form
