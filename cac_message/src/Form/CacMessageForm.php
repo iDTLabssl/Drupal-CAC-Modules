@@ -51,8 +51,10 @@ class CacMessageForm extends ConfigFormBase {
 			'#description' => $this->t('Welcome message display to specific path. Please add url start with slash and one url per line.<br/>No wildcard (*) supported.'),  
 			'#default_value' => $config->get('message_path'), 
 			'#required' => TRUE,
-			'#maxlength' => 150,
-			'#size' => 45,
+			'#attributes' => array(
+				'rows' => '5',
+				'cols' => '200',		  	
+			),
 	    ];  
 
     	/*Load all drupal roles*/
@@ -106,14 +108,9 @@ class CacMessageForm extends ConfigFormBase {
 		*/ 
 	public function submitForm(array &$form, FormStateInterface $form_state) {  
 		parent::submitForm($form, $form_state);  
-		
-		/* set alias of path and remove trailing slash*/
-		$message_path_alias = \Drupal::service('path.alias_manager')->getAliasByPath($form_state->getValue('message_path'));
-		$message_path_alias = rtrim(trim($message_path_alias), " \\/");
-
 		$this->config('cac_message.adminsettings')  
 		  ->set('welcome_message', $form_state->getValue('welcome_message'))  
-  		  ->set('message_path', $message_path_alias)  
+  		  ->set('message_path', $form_state->getValue('message_path'))  
   		  ->set('user_roles', $form_state->getValue('user_roles'))  
   		  ->set('display_message_type', $form_state->getValue('display_message_type'))  
 		->save();  
