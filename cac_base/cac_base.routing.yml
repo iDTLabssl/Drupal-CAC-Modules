@@ -4,3 +4,11 @@ config_cac_base.description:
     _controller: '\Drupal\cac_base\Controller\NodeTypeCompanyRegistration::description'
   requirements:
     _permission: 'access content'
+
+cac_base.anony_login_prompt_dispatcher_form:
+  path: 'anony-login-prompt-dispatch-form'
+  defaults:
+    _form: '\Drupal\cac_base\Form\AnonyLoginPromptDispatchForm'
+    _title: 'AnonyLoginPrompt Dispatcher Form'
+  requirements:
+    _permission: 'access content'

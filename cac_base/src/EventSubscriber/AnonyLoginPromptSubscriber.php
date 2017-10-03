@@ -20,7 +20,9 @@ class AnonyLoginPromptSubscriber implements EventSubscriberInterface {
   public function anonymousLoginPrompt(FilterResponseEvent $event) {
     $request = $event->getRequest();
     $redirect_url = $request->server->get('REQUEST_URI', null);
-    drupal_set_message(t('fffffffffff'), 'warning');
+    if (\Drupal::currentUser()->isAnonymous()) {
+       drupal_set_message(t('Please <a href="/user/login">Login</a> or <a href="/user/register"><strong>Register</strong></a> to access all the services we offer.'), 'warning');
+     }
   }
 
   /**
